@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:paddingStart="16dp"
     android:paddingEnd="16dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,6 +18,18 @@
         android:gravity="center"
         android:minHeight="50dp"
         android:text="JNI调用Java方法"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/jniDynamicRegistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:text="JNI动态注册"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 

@@ -18,11 +18,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView jniCallJava = findViewById(R.id.jniCallJava);
         jniCallJava.setOnClickListener(this);
 
+        TextView jniDynamicRegistered = findViewById(R.id.jniDynamicRegistered);
+        jniDynamicRegistered.setOnClickListener(this);
+
+
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this, JniCallJavaActivity.class);
+        Intent intent = null;
+        switch (view.getId()) {
+            case R.id.jniCallJava:
+                intent = new Intent(this, JniCallJavaActivity.class);
+                break;
+            case R.id.jniDynamicRegistered:
+                intent = new Intent(this, DynamicRegisterActivity.class);
+
+                break;
+        }
         startActivity(intent);
     }
 
